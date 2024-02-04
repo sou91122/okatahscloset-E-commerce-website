@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Okatah's Closet</title>
+    <link rel="icon" href="assets/images/favicon.ico" type="image/ico">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="library/style/app.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Sacramento&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+<header class="header">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-white py-2 px-0">
+            <a class="navbar-brand mr-5" href="index.html"><img src="assets/images/okatahs.png" alt="Logo"></a>
+            <ul class="d-flex ml-auto m-0 rightPnl order-lg-3 align-items-center">
+                <li><i class="fal fa-search searchToggle d-md-none d-block"></i>
+                    <div class="searchBar"><input type="text" name="" value="" placeholder="Search here.."><button class="d-none d-md-block btn_1" type="submit" value="submit"><i class="fal fa-search"></i></button><button class="d-block d-md-none btn_2" type="submit" value="submit">Search</button></div>
+                </li>
+                <li data-toggle="modal" data-target="#loginModal"><i class="fal fa-user"></i></li>
+                <li><a href="wishlist.html"><i class="fal fa-heart"></i></a></li>
+                <li class="position-relative"><a href="cart.html"><i class="fal fa-shopping-cart"></i><span class="count">2</span></a></li>
+            </ul>
+            <button class="navbar_toggler d-block d-lg-none" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto pt-4 pb-2 py-lg-0">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="products.html" class="nav-link">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="delivery.html" class="nav-link">Delivery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</header>
+
+
+<div class="inner_banner d-flex justify-content-center align-items-center" style="background-image: url(assets/images/newarrival_bg2.jpg);">
+    <h1>Shop</h1>
+</div>
+<div class="product_page">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="sidepanel">
+                   <span class="closeBtn d-block d-lg-none"><i class="fal fa-times"></i></span>
+                    <h3 class="pb-2 mb-3">Filter by:</h3>
+                    <ul class="nav d-flex flex-column mb-5" id="pills-tab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="men_tab" data-toggle="pill" href="#men" role="tab" aria-controls="pills-home" aria-selected="true">Men</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="women_tab" data-toggle="pill" href="#women" role="tab" aria-controls="pills-profile" aria-selected="false">Women</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="pills-tabContent">
+                        <div class="tab-pane fade show active" id="men" role="tabpanel" aria-labelledby="men_tab">
+                            <h3 class="py-2">Categories</h3>
+                            <ul class="bg_light mb-4">
+                                <li class="py-2">
+                                    <input id="shirts" type="checkbox" />
+                                    <label for="shirts">
+                                        <span></span>
+                                        Shirts
+                                    </label>
+                                </li>
+                                <li class="py-2">
+                                    <input id="tshirts" type="checkbox" />
+                                    <label for="tshirts">
+                                        <span></span>
+                                        T-shirts
+                                    </label>
+                                </li>
+                                <li class="py-2">
+                                    <input id="jeans" type="checkbox" />
+                                    <label for="jeans">
+                                        <span></span>
+                                        Jeans
+                                    </label>
+                                </li>
+                                <li class="py-2">
+                                    <input id="trousers" type="checkbox" />
+                                    <label for="trousers">
+                                        <span></span>
+                                        Trousers
+                                    </label>
+                                </li>
+                                <li class="py-2">
+                                    <input id="sweatshirts" type="checkbox" />
+                                    <label for="sweatshirts">
+                                        <span></span>
+                                        Sweatshirts
+                                    </label>
+                                </li>
+                                <li class="py-2">
+                                    <input id="jacket" type="checkbox" />
+                                    <label for="jacket">
+                                        <span></span>
+                                        Jacket
+                                    </label>
+                                </li>
+                                <li class="py-2">
+                                    <input id="kurtas" type="checkbox" />
+                                    <label for="kurtas">
+                                        <span></span>
+                                        Kurtas
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tab-pane fade" id="women" role="tabpanel" aria-labelledby="women_tab">
+                            <h3 class="py-2">Categories</h3>
+                            <ul class="bg_light mb-4">
+                                <li class="py-2">
+                                    <input id="tops" type="checkbox" />
+                                    <label for="tops">
+                                        <span></span>
+                                        Tops
+                                    </label>
+                                </li>
+                                <li class="py-2">
+                                    <input id="kurti" type="checkbox" />
+                                    <label for="kurti">
+                                        <span></span>
+                                        Kurtas
+                                    </label>
+                                </li>
+                                <li class="py-2">
+                                    <input id="sarees" type="checkbox" />
+                                    <label for="sarees">
+                                        <span></span>
+                                        Sarees
+                                    </label>
+                                </li>
+                                <li class="py-2">
+                                    <input id="dress" type="checkbox" />
+                                    <label for="dress">
+                                        <span></span>
+                                        Dresses
+                                    </label>
+                                </li>
+                                <li class="py-2">
+                                    <input id="w_tshirts" type="checkbox" />
+                                    <label for="w_tshirts">
+                                        <span></span>
+                                        T-shirts
+                                    </label>
+                                </li>
+                                <li class="py-2">
+                                    <input id="w_jeans" type="checkbox" />
+                                    <label for="w_jeans">
+                                        <span></span>
+                                        Jeans
+                                    </label>
+                                </li>
+                                <li class="py-2">
+                                    <input id="churidar" type="checkbox" />
+                                    <label for="churidar">
+                                        <span></span>
+                                        Churidar
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <h3 class="py-2">Brands</h3>
+                    <ul class="bg_light mb-4">
+                        <li class="py-2">
+                            <input id="mitera" type="checkbox" />
+                            <label for="mitera">
+                                <span></span>
+                                Mitera
+                            </label>
+                        </li>
+                        <li class="py-2">
+                            <input id="parx" type="checkbox" />
+                            <label for="parx">
+                                <span></span>
+                                Parx
+                            </label>
+                        </li>
+                        <li class="py-2">
+                            <input id="roadstar" type="checkbox" />
+                            <label for="roadstar">
+                                <span></span>
+                                Roadstar
+                            </label>
+                        </li>
+                        <li class="py-2">
+                            <input id="parkavenue" type="checkbox" />
+                            <label for="parkavenue">
+                                <span></span>
+                                Park Avenue
+                            </label>
+                        </li>
+                        <li class="py-2">
+                            <input id="blackberrys" type="checkbox" />
+                            <label for="blackberrys">
+                                <span></span>
+                                Blackberrys
+                            </label>
+                        </li>
+                        <li class="py-2">
+                            <input id="flyingmachine" type="checkbox" />
+                            <label for="flyingmachine">
+                                <span></span>
+                                Flying Machine
+                            </label>
+                        </li>
+                        <li class="py-2">
+                            <input id="adidas" type="checkbox" />
+                            <label for="adidas">
+                                <span></span>
+                                Adidas
+                            </label>
+                        </li>
+                        <li class="py-2">
+                            <input id="herenow" type="checkbox" />
+                            <label for="herenow">
+                                <span></span>
+                                HERE&amp;NOW
+                            </label>
+                        </li>
+                    </ul>
+
+                    <h3 class="py-2">Discount</h3>
+                    <ul class="bg_light mb-4">
+                        <li class="py-2">
+                            <input id="dis_10" type="checkbox" />
+                            <label for="dis_10">
+                                <span></span>
+                                10% and above
+                            </label>
+                        </li>
+                        <li class="py-2">
+                            <input id="dis_20" type="checkbox" />
+                            <label for="dis_20">
+                                <span></span>
+                                20% and above
+                            </label>
+                        </li>
+                        <li class="py-2">
+                            <input id="dis_30" type="checkbox" />
+                            <label for="dis_30">
+                                <span></span>
+                                30% and above
+                            </label>
+                        </li>
+                        <li class="py-2">
+                            <input id="dis_40" type="checkbox" />
+                            <label for="dis_40">
+                                <span></span>
+                                40% and above
+                            </label>
+                        </li>
+                        <li class="py-2">
+                            <input id="dis_50" type="checkbox" />
+                            <label for="dis_50">
+                                <span></span>
+                                50% and above
+                            </label>
+                        </li>
+                        <li class="py-2">
+                            <input id="dis_60" type="checkbox" />
+                            <label for="dis_60">
+                                <span></span>
+                                60% and above
+                            </label>
+                        </li>
+                        <li class="py-2">
+                            <input id="dis_70" type="checkbox" />
+                            <label for="dis_70">
+                                <span></span>
+                                70% and above
+                            </label>
+                        </li>
+                    </ul>
+                    <ul class="d-flex justify-content-between pt-3 mb-5">
+                        <li class="flex-grow-1 pr-1"><button class="w-100 apply_btn" type="submit">Apply</button></li>
+                        <li class="flex-grow-1 pl-1"><button class="w-100 reset_btn" type="reset">Reset</button></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-9">
+                <div class="d-flex justify-content-between align-items-center filterWpr">
+                    <div id="filter_btn" class="d-block d-lg-none"><i class="far fa-sliders-h pr-3"></i>Filter</div>
+                    <div class="sorting ml-auto">
+                        <label class="text-dark">Sort By :</label>
+                        <select name="" id="">
+                            <option value="">Sort By</option>
+                            <option value="">Title</option>
+                            <option value="">Price</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 col-6 product_Wpr">
+                        <div class="product">
+                            <div class="product_img">
+                                <img src="assets/images/products-1.png" alt="">
+                                <span>New</span>
+                                <i class="fal fa-heart"></i>
+                            </div>
+                            <div class="product_info">
+                                <h4>Women Cotton Kurta</h4>
+                                <div class="price">
+                                    $10.95
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-6 product_Wpr">
+                        <div class="product">
+                            <div class="product_img">
+                                <img src="assets/images/products-2.png" alt="">
+                                <span>New</span>
+                                <i class="fal fa-heart"></i>
+                            </div>
+                            <div class="product_info">
+                                <h4>Women Cotton Kurta</h4>
+                                <div class="price">
+                                    $10.95
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-6 product_Wpr">
+                        <div class="product">
+                            <div class="product_img">
+                                <img src="assets/images/products-3.png" alt="">
+                                <span>New</span>
+                                <i class="fal fa-heart"></i>
+                            </div>
+                            <div class="product_info">
+                                <h4>Women Cotton Kurta</h4>
+                                <div class="price">
+                                    $10.95
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-6 product_Wpr">
+                        <div class="product">
+                            <div class="product_img">
+                                <img src="assets/images/products-4.png" alt="">
+                                <span>New</span>
+                                <i class="fal fa-heart"></i>
+                            </div>
+                            <div class="product_info">
+                                <h4>Women Cotton Kurta</h4>
+                                <div class="price">
+                                    $10.95
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-6 product_Wpr">
+                        <div class="product">
+                            <div class="product_img">
+                                <img src="assets/images/products-1.png" alt="">
+                                <span>New</span>
+                                <i class="fal fa-heart"></i>
+                            </div>
+                            <div class="product_info">
+                                <h4>Women Cotton Kurta</h4>
+                                <div class="price">
+                                    $10.95
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-6 product_Wpr">
+                        <div class="product">
+                            <div class="product_img">
+                                <img src="assets/images/products-1.png" alt="">
+                                <span>New</span>
+                                <i class="fal fa-heart"></i>
+                            </div>
+                            <div class="product_info">
+                                <h4>Women Cotton Kurta</h4>
+                                <div class="price">
+                                    $10.95
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-6 product_Wpr">
+                        <div class="product">
+                            <div class="product_img">
+                                <img src="assets/images/products-3.png" alt="">
+                                <span>New</span>
+                                <i class="fal fa-heart"></i>
+                            </div>
+                            <div class="product_info">
+                                <h4>Women Cotton Kurta</h4>
+                                <div class="price">
+                                    $10.95
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-6 product_Wpr">
+                        <div class="product">
+                            <div class="product_img">
+                                <img src="assets/images/products-4.png" alt="">
+                                <span>New</span>
+                                <i class="fal fa-heart"></i>
+                            </div>
+                            <div class="product_info">
+                                <h4>Women Cotton Kurta</h4>
+                                <div class="price">
+                                    $10.95
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-6 product_Wpr">
+                        <div class="product">
+                            <div class="product_img">
+                                <img src="assets/images/products-1.png" alt="">
+                                <span>New</span>
+                                <i class="fal fa-heart"></i>
+                            </div>
+                            <div class="product_info">
+                                <h4>Women Cotton Kurta</h4>
+                                <div class="price">
+                                    $10.95
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-6 product_Wpr">
+                        <div class="product">
+                            <div class="product_img">
+                                <img src="assets/images/products-2.png" alt="">
+                                <span>New</span>
+                                <i class="fal fa-heart"></i>
+                            </div>
+                            <div class="product_info">
+                                <h4>Women Cotton Kurta</h4>
+                                <div class="price">
+                                    $10.95
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-6 product_Wpr">
+                        <div class="product">
+                            <div class="product_img">
+                                <img src="assets/images/products-3.png" alt="">
+                                <span>New</span>
+                                <i class="fal fa-heart"></i>
+                            </div>
+                            <div class="product_info">
+                                <h4>Women Cotton Kurta</h4>
+                                <div class="price">
+                                    $10.95
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-6 product_Wpr">
+                        <div class="product">
+                            <div class="product_img">
+                                <img src="assets/images/products-4.png" alt="">
+                                <span>New</span>
+                                <i class="fal fa-heart"></i>
+                            </div>
+                            <div class="product_info">
+                                <h4>Women Cotton Kurta</h4>
+                                <div class="price">
+                                    $10.95
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pagination mt-4">
+                    <ul class="d-flex justify-content-center align-items-center m-auto">
+                        <li><a href="#" class="px-3">Prev</a></li>
+                        <li><a href="#" class="active">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#" class="px-3">Next</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="footer">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6 col-lg-3 py-3 order-lg-2">
+                <h3>Know Us</h3>
+                <ul>
+                    <li><a href="brands.html">Brands</a></li>
+                    <li><a href="delivery.html">Delivery</a></li>
+                    <li><a href="policy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms &amp; Condition</a></li>
+                </ul>
+            </div>
+            <div class="col-md-6 col-lg-3 py-3 order-lg-3">
+                <h3>Guide</h3>
+                <ul>
+                    <li><a href="payment.html">Payment</a></li>
+                    <li><a href="returns.html">Returns</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="col-md-6 col-lg-3 py-3 order-lg-4">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li>42 Kamal Apts, Shankar Lane, Kandivli, Mumbai-400067</li>
+                    <li><a href="tel:02228081088"><i class="far fa-phone-alt"></i>(022)-2808-1088</a></li>
+                    <li><a href="mailto:okatahs.info@xyz.com"><i class="far fa-envelope"></i>okatahs.info@xyz.com</a></li>
+                </ul>
+            </div>
+            <div class="col-md-6 col-lg-3 py-3 order-lg-1">
+                <div class="footer_logo mb-5">
+                    <img src="assets/images/okatahs.png" alt="">
+                </div>
+                <h3>Newsletter</h3>
+                <form action="">
+                    <input type="text" name="" value="" placeholder="Enter your Email">
+                    <button type="submit" value="submit"><i class="far fa-envelope-open"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="copyright d-flex justify-content-between align-items-center flex-column flex-sm-row py-3">
+            <ul class="d-flex mb-0 order-sm-2">
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                <li><a href="#"><i class="fab fa-vimeo-v"></i></a></li>
+            </ul>
+            <p class="order-sm-1">© 2021 <a href="index.html">Okatah'scloset</a> | All Rights Reserved | developed by <a href="#">Lambai Communication</a></p>
+        </div>
+    </div>
+</footer>
+<script src="library/js/app-min.js"></script>
+</body>
+</html>
+
+    <!-------------------- Login Modal ----------------------->
+
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content px-4 px-sm-5 py-4">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <div class="p-3 text-center">
+                    <h2 class="modal_title" id="exampleModalLabel">Sign In</h2>
+                    <h6 class="modal_subcont"><em>We're happy to see you return, Please login to continue.</em></h6>
+                </div>
+                <div class="modal-body">
+                    <form action="" class="mb-3">
+                        <div class="form_grp position-relative mb-4">
+                            <label for="u_email">E-mail</label>
+                            <input id="u_email" type="text" name="" value="" placeholder="Enter Your Email">
+                            <span class="grp_icon"><i class="fas fa-user"></i></span>
+                        </div>
+                        <div class="form_grp position-relative mb-4">
+                            <label for="u_pass">Password</label>
+                            <input id="u_pass" type="text" name="" value="" placeholder="Enter Your Password">
+                            <span class="grp_icon"><i class="fas fa-lock"></i></span>
+                            <span class="pass_visible"><i class="fas fa-eye-slash"></i></span>
+                        </div>
+                        <div class="form_grp position-relative mb-4">
+                            <ul class="d-flex justify-content-between">
+                                <li><input id="ply_1" type='checkbox' />
+                                    <label for="ply_1">
+                                        <span></span>
+                                        Remember Me
+                                    </label>
+                                </li>
+                                <li><a href="#" data-dismiss="modal" data-toggle="modal" data-target="#forgotPassModal">Forgot Password ?</a></li>
+                            </ul>
+                        </div>
+                        <div class="form_grp position-relative">
+                            <button type="submit" name="">Sign In</button>
+                        </div>
+                    </form>
+                    <p class="text-center">You don't have have an account ? <a id="signup_btn" href="#" data-dismiss="modal" data-toggle="modal" data-target="#signupModal" data-dismiss="modal">Register</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <!-------------------- Sign Up Modal ----------------------->
+
+    <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content px-4 px-sm-5 py-4">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <div class="p-3 text-center">
+                    <h2 class="modal_title" id="exampleModalLabel">Sign Up</h2>
+                    <h6 class="modal_subcont"><em>We're happy to see you return, Please login to continue.</em></h6>
+                </div>
+                <div class="modal-body">
+                    <form action="" class="mb-3">
+                        <div class="form_grp position-relative mb-4">
+                            <label for="fname">First Name</label>
+                            <input id="fname" type="text" name="" value="" placeholder="Enter Your First Name">
+                            <span class="grp_icon"><i class="fas fa-id-card-alt"></i></span>
+                        </div>
+                        <div class="form_grp position-relative mb-4">
+                            <label for="lname">Last Name</label>
+                            <input id="lname" type="text" name="" value="" placeholder="Enter Your Last Name">
+                            <span class="grp_icon"><i class="fas fa-id-card-alt"></i></span>
+                        </div>
+                        <div class="form_grp position-relative mb-4">
+                            <label for="phnumber">Phone Number</label>
+                            <input id="phnumber" type="text" name="" value="" placeholder="Enter Your Phone">
+                            <span class="grp_icon"><i class="fas fa-phone-alt"></i></span>
+                        </div>
+                        <div class="form_grp position-relative mb-4">
+                            <label for="mail">Email</label>
+                            <input id="mail" type="text" name="" value="" placeholder="Enter Your Email">
+                            <span class="grp_icon"><i class="fas fa-envelope"></i></span>
+                        </div>
+                        <div class="form_grp position-relative mb-4">
+                            <label for="pass">Password</label>
+                            <input id="pass" type="text" name="" value="" placeholder="Enter Your Password">
+                            <span class="grp_icon"><i class="fas fa-key"></i></span>
+                            <span class="pass_visible"><i class="fas fa-eye-slash"></i></span>
+                        </div>
+                        
+                        <div class="form_grp position-relative mt-5 pb-2">
+                            <button type="submit" name="">Sign Up</button>
+                        </div>
+                    </form>
+                    <p class="text-center">Already a User ? <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#loginModal" id="login_btn">Sign In</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <!-------------------- Forgot Password ----------------------->
+
+    <div class="modal fade" id="forgotPassModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content px-4 px-sm-5 py-4">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <div class="p-3 text-center">
+                    <h2 class="modal_title" id="exampleModalLabel">Forgot Password?</h2>
+                    <h6 class="modal_subcont"><em>Enter your Registered E-mail Address for Reseting Password</em></h6>
+                </div>
+                <div class="modal-body">
+                    <form action="" class="mb-3">
+                        <div class="form_grp mb-4">
+                            <label for="r_mail">E-mail</label>
+                            <input class="pl-4" id="r_mail" type="text" name="" value="" placeholder="Enter Your Email">
+                        </div>
+                        
+                        <div class="form_grp position-relative mb-4">
+                            <button type="submit" name="" data-dismiss="modal" data-toggle="modal" data-target="#otpModal">Continue</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+     <!-------------------- OTP ----------------------->
+
+    <div class="modal fade" id="otpModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content px-4 px-sm-5 py-4">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <div class="p-3 text-center">
+                    <h2 class="modal_title mb-0" id="exampleModalLabel">One-Time-Password</h2>
+                    <h6 class="modal_subcont"><em>Please Check your Registered E-mail Address for OTP</em></h6>
+                </div>
+                <div class="modal-body">
+                    <form action="" class="mb-3">
+                        <div class="form_grp mb-4">
+                            <label for="otp">OTP here</label>
+                            <input class="pl-4" id="otp" type="text" name="" value="" placeholder="Enter Your OTP">
+                        </div>
+                        
+                        <div class="form_grp position-relative mb-4">
+                            <button type="submit" name="" data-dismiss="modal" data-toggle="modal" data-target="#resetPassModal">Continue</button>
+                        </div>
+                    </form>
+                    <p class="text-center">Did not recieve OTP ? <a href="#">Send again</a></p>
+                    <span id="timer">
+                        <span id="time">10</span>Seconds      
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <!-------------------- Reset Password ----------------------->
+
+    <div class="modal fade" id="resetPassModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content px-4 px-sm-5 py-4">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <div class="p-3 text-center">
+                    <h2 class="modal_title" id="exampleModalLabel">Password Reset</h2>
+                    <h6 class="modal_subcont"><em>Enter Your New Password</em></h6>
+                </div>
+                <div class="modal-body">
+                    <form action="" class="mb-3">
+                        <div class="form_grp position-relative mb-4">
+                            <label for="e_pass">Enter Password</label>
+                            <input class="pl-4" id="e_pass" type="text" name="" value="" placeholder="Enter Password">
+                            <span class="pass_visible"><i class="fas fa-eye-slash"></i></span>
+                        </div>
+                        <div class="form_grp position-relative mb-4">
+                            <label for="re_pass">Re-enter Password</label>
+                            <input class="pl-4" id="re_pass" type="text" name="" value="" placeholder="Re-enter Password">
+                            <span class="pass_visible"><i class="fas fa-eye-slash"></i></span>
+                        </div>
+                        <div class="form_grp position-relative mb-4">
+                            <button type="submit" name="">Reset Password</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
